@@ -11,14 +11,18 @@ import "./styles.css";
 
 function App() {
   const modalRef = useRef();
+  const modalExaple2 = useRef();
 
   return (
     <div className="App">
       <button onClick={() => modalRef.current.open()}>Open Modal</button>
       <LoadingModal ref={modalRef}>
-        {/*<h1>Hello world</h1>*/}
         <img alt="loading" src={Rocket} />
       </LoadingModal>
+      <button onClick={() => modalExaple2.current.open()}>Open Modal</button>
+      <Modal ref={modalRef}>
+        <h1>Hello world</h1>
+      </Modal>
     </div>
   );
 }
